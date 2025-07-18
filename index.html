@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <title>Alvarenga</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+            <div class="links">
+                <a href="#projetos">Projetos</a>
+                <a href="#historia">Sobre nós</a>
+                <a href="#feedbacks">Feedbacks</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-conteudo">
+            <img class="logo-central" src="/img/SADSAD.png" alt="">
+            <h1 class="frase">Elegância que transforma espaços ao ar livre</h1>
+        </div>
+    </section>
+
+
+    <section id="projetos">
+        <div class="container-projetos">
+            <h2>Projetos que Inspiram</h2>
+            <p class="subtitulo">Transformando ideias em espaços extraordinários.</p>
+            <div class="masonry">
+                <div class="card-projetos"><img src="/img/1.jpeg" alt="Projeto 1"></div>
+                <div class="card-projetos"><img src="/img/2.jpeg" alt="Projeto 2"></div>
+                <div class="card-projetos"><img src="/img/3.jpeg" alt="Projeto 3"></div>
+                <div class="card-projetos"><img src="/img/4.jpeg" alt="Projeto 4"></div>
+                <div class="card-projetos"><img src="/img/5.jpeg" alt="Projeto 5"></div>
+                <div class="card-projetos"><img src="/img/Imagem do WhatsApp de 2025-06-25 à(s) 19.57.10_2fd457e8.jpg"
+                        alt="Projeto 4"></div>
+                <div class="card-projetos"><img src="/img/Imagem do WhatsApp de 2025-06-25 à(s) 19.57.10_2fd457e8.jpg"
+                        alt="Projeto 4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedbacks escondido">
+        <h2>O que dizem sobre nós</h2>
+        <div class="carrossel-container">
+            <button class="anterior"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg></button>
+            <div class="carrossel-viewport">
+                <div class="catia-gostosa">
+                    <img src="/img/feed1.png" alt="">
+                    <img src="/img/feed2.png" alt="">
+                    <img src="/img/feed3.png" alt="">
+                    <img src="/img/feed4.png" alt="">
+                    <img src="/img/feed5.png" alt="">
+                    <img src="/img/feed6.png" alt="">
+                </div>
+            </div>
+            <button class="proximo"> <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg></button>
+        </div>
+    </section>
+
+    <section id="historia">
+        <div class="container-historia escondido">
+            <h2>Nossa História</h2>
+            <p id="subtitulo-digitando" class="subtitulo-historia">Da paixão pelo design à criação de móveis que transformam espaços.</p>
+            <p class="texto"> Fundada em [ano], a Alvarenga nasceu do desejo de unir elegância, funcionalidade e durabilidade em cada peça. 
+      Com um olhar atento aos detalhes e inspiração na arquitetura contemporânea, transformamos sonhos em realidade
+      para ambientes externos e internos.</p>
+        </div>
+    </section>
+
+
+    <hr class="divider">
+
+
+    <section id="contato">
+        <h2>Solicite seu Orçamento</h2>
+        <form id="formContato">
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <textarea id="mensagem" rows="5" placeholder="Descreva seu orçamento ou dúvida" required></textarea>
+            <button type="submit">Enviar pelo WhatsApp</button>
+        </form>
+    </section>
+
+    <footer id="footer">
+        <p> © 2025 Alvarenga. Todos os direitos reservados.</p>
+        <div class="footer-icons">
+            <a href="https://wa.me/5521967648217" target="_blank" aria-label="Whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="insta" href="https://instagram.com/seuusuario" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+
+</html>

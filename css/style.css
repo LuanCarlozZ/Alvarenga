@@ -1,0 +1,715 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  ;
+}
+
+body {
+  background-color: #111;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+
+
+
+
+/* SESSAO HERO  */
+
+header {
+  background: transparent;
+  position: absolute;
+  /* ou fixed se quiser que ela fique sempre visível ao rolar */
+  width: 100%;
+  padding: 40px 0;
+  z-index: 10;
+
+  /* para ficar acima do conteúdo */
+}
+
+nav.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+a {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.links a:hover {
+  transform: translateX(7px);
+  box-shadow: 0px 1px 0px rgba(36, 34, 34, 0.986);
+  transform: scale(1.1);
+  color: rgb(245, 239, 239);
+
+}
+
+.links a {
+  margin: 0 50px;
+  text-decoration: none;
+  color: rgba(231, 231, 231, 0.938);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: rgb(223, 213, 213);
+  cursor: pointer;
+}
+
+
+.hero {
+  background-image: url(/img/windows-11-dark-mode-abstract-background-black-background-2560x1080-8710.jpg);
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  background-color: #1a1a1a;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* ajuste a opacidade conforme quiser */
+  z-index: 1;
+}
+
+.hero-conteudo img {
+  width: 900px;
+  margin-top: -250px;
+
+}
+
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+}
+
+.hero h1 {
+  margin-top: -150px;
+  font-size: 2.9rem;
+  font-weight: 300;
+
+}
+
+.hero h1 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+
+.frase {
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.9);
+}
+
+.logo-central {
+  transition: transform 0.6s ease;
+  filter: drop-shadow(0px 0px 15px rgba(253, 253, 253, 0.9))
+}
+
+.logo-central:hover {
+  transform: scale(1.05);
+}
+
+
+/* SESSAO PROJETOS */
+
+#projetos {
+  background-color: #0f0f0f;
+  padding-top: 120px;
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.6);
+}
+
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Seção escura com tipografia de luxo */
+#projetos {
+  background-color: #0f0f0f;
+  color: #f5f5f5;
+  padding: 80px 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.container-projetos {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container-projetos h2 {
+  font-size: 3.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.container-projetos .subtitulo {
+  font-size: 1.3rem;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+/* Masonry Grid estilizado */
+.masonry {
+  column-count: 3;
+  column-gap: 24px;
+}
+
+@media (max-width: 1000px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Card visual refinado */
+.card-projetos {
+  break-inside: avoid;
+  margin-bottom: 24px;
+  overflow: hidden;
+  border-radius: 16px;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 40px rgba(255, 255, 255, 0.04);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+/* Imagem refinada */
+.card-projetos img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Hover com brilho */
+.card-projetos:hover img {
+  transform: scale(1.04);
+  filter: brightness(1.15);
+}
+
+
+.escondido {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.mostrar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h2.escondido {
+  transform: translateY(-20px);
+}
+
+h2.mostrar {
+  transform: translateY(0);
+}
+
+
+/* SESSAO FEEDBACKS*/
+
+
+.feedbacks {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.feedbacks h2 {
+  color: white;
+  margin-bottom: 40px;
+   background: linear-gradient(90deg, #faf9f6, #72716b);
+  -webkit-background-clip: text;
+  font-weight: 400;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.carrossel-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  transition: transform 2s ease, opacity 1s ease;
+}
+
+.carrossel-container.escondido {
+  opacity: 0;
+  transform: translateX(100vw);
+}
+
+.carrossel-container.mostrar {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.carrossel-viewport {
+  overflow: hidden;
+  width: 1400px;
+  max-width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
+
+
+h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  border-radius: 2px;
+}
+
+
+
+
+.catia-gostosa {
+  display: flex;
+  overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+
+
+.catia-gostosa img.escondido {
+  transform: scale(0.9);
+}
+
+
+.catia-gostosa img.mostrar {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.catia-gostosa img {
+  width: 450px;
+  height: auto;
+  margin-right: 18px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  transform-origin: center;
+  filter: brightness(0.5);
+
+  opacity: 0;
+  transform: translateX(100px);
+  /* começa fora da tela à direita */
+
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.catia-gostosa img:hover {
+  transform: scale(1.1);
+  filter: brightness(1);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.catia-gostosa:hover {
+  transform: none;
+}
+
+.anterior,
+.proximo {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin-right: 30px;
+  margin-left: 30px;
+  font-size: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+
+
+
+.proximo:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.2);
+}
+
+.anterior:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.2);
+}
+
+
+.anterior,
+.proximo {
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 10;
+}
+
+.anterior.mostrar,
+.proximo.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+
+
+/* SESSAO NOSSA HISTORIA  */
+
+#historia {
+  background-color: #121212;
+  color: #ddd;
+  max-width: 900px;
+  margin: 200px auto 15px auto;
+  text-align: center;
+  padding: 40px 30px;
+  overflow: hidden;
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+}
+
+
+
+.container-historia {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+
+.container-historia h2 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #fffdf3;
+  margin-bottom: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+
+
+
+.container-historia h2:hover {
+  text-shadow: 0 0 12px rgb(41, 40, 39), 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+
+.container-historia .subtitulo-historia {
+  font-size: 1.15rem;
+  color: #aaa;
+  margin-bottom: 30px;
+  display: block;
+  font-weight: 400;
+  background: linear-gradient(90deg, #fffdf9, #72716b);
+  -webkit-background-clip: text;
+  font-weight: 400;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.container-historia .texto {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ccc;
+  background: linear-gradient(90deg, #fffdf9, #9b9a99);
+  -webkit-background-clip: text;
+  font-weight: 400;
+  -webkit-text-fill-color: transparent;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#subtitulo-digitando{
+  display: block;
+  margin-top: 10px;
+  font-size: 1.2rem;
+  border-right: 2px solid #e7e5dc;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40, end), blink 0.7s step-end infinite;
+}
+
+
+
+@keyframes blink{
+  50% {border-color: transparent;}
+}
+
+.container-historia.escondido{
+  opacity: 0;
+  transform: translateY(900px);
+  transition: opacity 9s ease, transform 9s ease;
+}
+
+.container-historia.mostrar{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* CONTATO  */
+
+
+#contato{
+  max-width: 500px;
+  padding: 34px 30px;
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 0 auto 80px auto;
+  margin-top: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(225, 226, 225, 0.3);
+}
+
+
+#contato h2{
+  text-align: center;
+  font-size: 1.9rem;
+  color: #191a19;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 1.5px;
+}
+
+#formContato{
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+#formContato input,
+#formContato textarea{
+  padding: 14px 16px;
+  font-size: 1rem;
+  border: 2px solid #444;
+  border-radius: 10px;
+  color: #eee;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  background-color: #121212;
+  font-family: Aria,  sans-serif;
+}
+
+#formContato input:focus,
+#formContato textarea:focus{
+  border-color: #00ff78;
+  background-color: #1a1a1a;
+  outline: none;
+  color: #fff;
+}
+
+#formContato textarea{
+  resize: vertical;
+  min-height: 120px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#formContato button{
+  padding: 14px 0;
+  background-color: #00ff78;
+  color: #121212;
+  font-size: 1.15rem;
+  border: none;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 5px 15px rgba(0, 255, 120, 0.6);
+}
+
+#formContato button:hover{
+  background-color: #00CC61;
+  box-shadow: 0 8px 20px rgba(0, 204, 97, 0.8);
+}
+
+.divider {
+  border: none;
+  height: 2px;
+  width: 60%;
+  margin: 50px auto;  /* controla espaço acima/abaixo */
+  background: linear-gradient(90deg, transparent, #8f9290, transparent);
+  border-radius: 2px;
+}
+
+
+
+/* FOOTER  */
+
+#footer{
+  background-color: #111;
+  color: #ccc;
+  padding: 25px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 90px;
+  margin-bottom: 30px;
+}
+
+#footer p{
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icons a{
+  color: #ccc;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-icons a:hover{
+  transform: scale(1.2);
+}
+
+.footer-icons a .fa-whatsapp:hover{
+  color: #00ff78;
+}
+
+.footer-icons a .fa-instagram:hover{
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* segurança extra */
+}
+
+
+
+/* RESPONSIVIDADE*/
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .links a {
+    margin: 12px 0;
+
+  }
+
+  .hero-conteudo .frase h1{ 
+    width: 90px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+
+  .links a:hover {
+
+    transform: translateX(7px);
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.521);
+    transform: scale(1.2);
+    color: rgb(255, 255, 255);
+  }
+
+
+  .links.ativo {
+    display: flex;
+
+  }
+
+}
+
+
+@media(max-width: 600px){
+  #historia{
+    padding: 30px 20px;
+    font-size: 0.95rem;
+  }
+
+  #contato{
+    padding: 25px 20px;
+  }
+}
