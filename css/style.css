@@ -70,7 +70,7 @@ a {
 
 
 .hero {
-  background-image: url(../img/imagembg.png);
+  background-image: url(/Alvarenga/img/imagembg.png);
   height: 100vh;
   background-position: center;
   background-size: cover;
